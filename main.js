@@ -51,26 +51,52 @@
 
 
 // 4:Container with Most Water 
-const arr = [1, 4, 5, 3];
-output = 6;
+// const arr = [1, 4, 5, 3];
+// output = 6;
 
-const maxAmount = (arr,area) => {
-    let maxArea =0;
-for(let i = 0; i < arr.length; i++) {
-   for(let j = i+1; j < arr.length; j++) {
-    let height;
-    if(arr[i] < arr[j]) {
-        height = arr[i];
+// const maxAmount = (arr,area) => {
+//     let maxArea =0;
+// for(let i = 0; i < arr.length; i++) {
+//    for(let j = i+1; j < arr.length; j++) {
+//     let height;
+//     if(arr[i] < arr[j]) {
+//         height = arr[i];
+//     }
+//     else {
+//         height = arr[j];
+//     }
+//     area = height * (j-i);
+//     if(area > maxArea) {
+//         maxArea = area;
+//     }
+//    }
+// }
+// return maxArea;
+// }
+// console.log(maxAmount(arr));
+
+
+
+
+// 5:Longest Substring Without Repeating Characters ماعرفت التكملة
+const longestSub = (str) => {
+    let newStr = "";
+    let maxLength = 0;
+    
+    for(let i = 0; i < str.length; i++) {
+        let isRepeated = false;
+        let char = str[i];
+      
+        for(let j = 0; j < newStr.length; j++) {
+            if(newStr[j] === char) {
+                isRepeated = true;
+                break;
+            }
+        }
+
+        if(!isRepeated) {
+            newStr += char;
+        }
     }
-    else {
-        height = arr[j];
-    }
-    area = height * (j-i);
-    if(area > maxArea) {
-        maxArea = area;
-    }
-   }
+    
 }
-return maxArea;
-}
-console.log(maxAmount(arr));
