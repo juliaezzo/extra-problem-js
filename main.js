@@ -47,10 +47,7 @@
 //   return false;
 // };
 
-
-
-
-// 4:Container with Most Water 
+// 4:Container with Most Water
 // const arr = [1, 4, 5, 3];
 // output = 6;
 
@@ -75,28 +72,34 @@
 // }
 // console.log(maxAmount(arr));
 
-
-
-
 // 5:Longest Substring Without Repeating Characters ماعرفت التكملة
-const longestSub = (str) => {
-    let newStr = "";
-    let maxLength = 0;
-    
-    for(let i = 0; i < str.length; i++) {
-        let isRepeated = false;
-        let char = str[i];
-      
-        for(let j = 0; j < newStr.length; j++) {
-            if(newStr[j] === char) {
-                isRepeated = true;
-                break;
-            }
-        }
+// const longestSub = (str) => {
+//     let newStr = "";
+//     let maxLength = 0;
 
-        if(!isRepeated) {
-            newStr += char;
-        }
-    }
+//     for(let i = 0; i < str.length; i++) {
+//         let isRepeated = false;
+//         let char = str[i];
+
+//         for(let j = 0; j < newStr.length; j++) {
+//             if(newStr[j] === char) {
+//                 isRepeated = true;
+//                 break;
+//             }
+//         }
+
+//         if(!isRepeated) {
+//             newStr += char;
+//         }
+//     }
+
+// }
+
+
+
+
+
+// 6:Trapping Rain Water Problem فهمتا بس ماعرفت اكتب الكود
+// const rainWater = (arr) => {
     
-}
+// }
