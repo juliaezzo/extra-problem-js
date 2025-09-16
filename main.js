@@ -46,3 +46,31 @@
 //   }
 //   return false;
 // };
+
+
+
+
+// 4:Container with Most Water 
+const arr = [1, 4, 5, 3];
+output = 6;
+
+const maxAmount = (arr,area) => {
+    let maxArea =0;
+for(let i = 0; i < arr.length; i++) {
+   for(let j = i+1; j < arr.length; j++) {
+    let height;
+    if(arr[i] < arr[j]) {
+        height = arr[i];
+    }
+    else {
+        height = arr[j];
+    }
+    area = height * (j-i);
+    if(area > maxArea) {
+        maxArea = area;
+    }
+   }
+}
+return maxArea;
+}
+console.log(maxAmount(arr));
